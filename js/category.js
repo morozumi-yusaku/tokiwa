@@ -22,10 +22,16 @@ const categories = [
 
 function updateCategory(ctgry) {
     const d = document.getElementById("category-list");
-    
+
     // 子要素の全削除
     while (d.firstChild) {
         d.removeChild(d.firstChild);
+    }
+
+    // データの正当性を確認
+    if (!ctgry || !Array.isArray(ctgry)) {
+        console.error('Invalid categories data:', ctgry);
+        return;
     }
 
     // 要素を追加していく
@@ -51,15 +57,17 @@ function updateCategory(ctgry) {
 
         var ul = document.createElement("ul");
         ul.className = "ml-4";
-        category.category2.forEach(subCategory => {
-            var li = document.createElement("li");
-            var sBtn = document.createElement("button");
-            sBtn.className = "bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-1 cursor-pointer";
-            sBtn.setAttribute("onclick", `HandleCategorySearch(2, "${subCategory}")`)
-            sBtn.innerHTML = subCategory;
-            li.appendChild(sBtn);
-            ul.appendChild(li);
-        });
+        if (category.category2 && Array.isArray(category.category2)) {
+            category.category2.forEach(subCategory => {
+                var li = document.createElement("li");
+                var sBtn = document.createElement("button");
+                sBtn.className = "bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-1 cursor-pointer";
+                sBtn.setAttribute("onclick", `HandleCategorySearch(2, "${subCategory}")`)
+                sBtn.innerHTML = subCategory;
+                li.appendChild(sBtn);
+                ul.appendChild(li);
+            });
+        }
         div.appendChild(ul);
 
         detail.appendChild(div);
@@ -68,14 +76,14 @@ function updateCategory(ctgry) {
 }
 
 async function getCategories() {
-    const url = FETCH_URL_CATEGORY + `?type=category`;
+    const url = `${FETCH_URL_CATEGORY}?type=category`;
     try {
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log("Categories fetched:", data); // デバッグ用にデータをコンソールに表示
+        console.log('Categories fetched:', data); // デバッグのためにデータをログに出力
         return data;
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
