@@ -4,7 +4,7 @@
  */
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
-const FETCH_URL_SEARCH = "https://script.google.com/macros/s/AKfycbyJNYQU8I0fkb62G5ka4VIClgoDXqh6LJJaovoWDJa3wGMLEu9XWuLMjrOARV4gXogy/exec";
+const FETCH_URL_SEARCH = "https://script.google.com/macros/s/AKfycby2iOu4mSyHkIBtl8zTtr6Z8J4WOc1CdsMzlogTbaJMU1wBSGM3Ql5boLyCDCA9xYHd/exec";
 // CSSクラス追加
 function addClass(obj, cls) {
     if (!obj.classList.contains(cls)) {
