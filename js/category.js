@@ -2,7 +2,7 @@
  * Google Spreadsheetからカテゴリー一覧を取得する。
  */
 
-const FETCH_URL_CATEGORY = "https://script.google.com/macros/s/AKfycby2iOu4mSyHkIBtl8zTtr6Z8J4WOc1CdsMzlogTbaJMU1wBSGM3Ql5boLyCDCA9xYHd/exec";
+const FETCH_URL_CATEGORY = "https://script.google.com/macros/s/AKfycbybo_C0nJZq_6Z_PtxVeJ37KvP-MoIZKMnIlzpuySO8T4lLTfGEq4I-VPVbw_W9_TIT/exec";
 
 // ダミーデータ
 const categories = [
