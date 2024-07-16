@@ -95,7 +95,7 @@ async function HandleWordSearch () {
             li.innerHTML = `
 <li class="py-4">
     <div class="bg-white rounded-md border p-4">
-        <h3 class="text-2xl font-black mt-2 mb-4"><span class="bg-black p-2 rounded text-white">${ datas[i].type }</span>${ datas[i].title }</h3>
+        <h3 class="text-2xl font-black mt-2 mb-4">${ datas[i].title }</h3>
         <div class="flex mt-1 mb-1">
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">大カテゴリー：${ datas[i].category1 }</h4>
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">小カテゴリー：${ datas[i].category2.filter(c => c != "") }</h4>
@@ -211,7 +211,7 @@ async function HandleCategorySearch(type, ctgry) {
             li.innerHTML = `
 <li class="py-4">
     <div class="bg-white rounded-md border p-4">
-        <h3 class="text-2xl font-black mt-2 mb-4"><span class="bg-black p-2 rounded text-white">${ datas[i].type }</span>${ datas[i].title }</h3>
+        <h3 class="text-2xl font-black mt-2 mb-4">${ datas[i].title }</h3>
         <div class="flex mt-1 mb-1">
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">大カテゴリー：${ datas[i].category1 }</h4>
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">小カテゴリー：${ datas[i].category2.filter(c => c != "") }</h4>
