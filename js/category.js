@@ -37,10 +37,10 @@ function updateCategory(ctgry) {
     // 要素を追加していく
     ctgry.forEach(category => {
         var detail = document.createElement("details");
-        detail.className = "open:bg-purple-300 rounded open:shadow-md border-purple-600 p-1 my-1";
+        detail.className = "open:bg-green-300 rounded open:shadow-md border-green-700 p-1 my-1";
 
         var summary = document.createElement("summary");
-        summary.className = "text-lg font-bold hover:bg-purple-300 p-1 rounded cursor-pointer";
+        summary.className = "text-lg font-bold hover:bg-green-300 p-1 rounded cursor-pointer";
         summary.innerHTML = category.category1;
         detail.appendChild(summary);
 
@@ -49,7 +49,7 @@ function updateCategory(ctgry) {
 
         var btnDiv = document.createElement("div");
         var btn = document.createElement("button");
-        btn.className = "bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2 text-2xl";
+        btn.className = "bg-green-700 text-white px-8 py-1 rounded-full hover:bg-green-500 m-2 text-2xl";
         btn.setAttribute("onclick", `HandleCategorySearch(1, "${category.category1}")`)
         btn.innerHTML = category.category1;
         btnDiv.appendChild(btn);
@@ -61,7 +61,7 @@ function updateCategory(ctgry) {
             category.category2.forEach(subCategory => {
                 var li = document.createElement("li");
                 var sBtn = document.createElement("button");
-                sBtn.className = "bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-1 cursor-pointer";
+                sBtn.className = "bg-green-700 text-white px-8 py-1 rounded-full hover:bg-green-500 m-1 cursor-pointer";
                 sBtn.setAttribute("onclick", `HandleCategorySearch(2, "${subCategory}")`)
                 sBtn.innerHTML = subCategory;
                 li.appendChild(sBtn);
