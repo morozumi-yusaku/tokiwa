@@ -8,26 +8,28 @@
     <!-- style tailwind css ver.3 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.min.js"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/amataka-scholar/favicon.ico">
 
     <title>Tokiwa Scholar</title>
 </head>
-<body class="bg-purple-50">
+<body class="bg-green-50">
     <!-- under 768px -->
     <div class="md:hidden w-screen h-screen flex flex-col justify-center items-center">
-        <header class="fixed top-0 bg-purple-600 w-full flex flex-col items-center justify-between p-2 text-white">
+        <header class="fixed top-0 bg-green-700 w-full flex flex-col items-center justify-between p-2 text-white">
             <h1 class="text-3xl font-black">Tokiwa Scholar</h1>
             <div>
                 <a href="https://www.tokiwa.ac.jp/~tokikou/" target="_blank" rel="noopener noreferrer" class="hover:underline">常磐大学高等学校ホームページ</a>
             </div>
         </header>
-        <p class="text-purple-600">
+        <p class="text-green-700">
             申し訳ありません。このサイズの画面には対応しておりません。
         </p>
     </div>
     
     <!-- over 768px -->
     <div class="hidden md:block w-screen h-screen">
-        <header class="bg-purple-600 w-full flex items-center justify-between h-12 px-2 text-white">
+        <header class="bg-green-700 w-full flex items-center justify-between h-12 px-2 text-white">
             <h1 class="text-3xl font-black flex">
                 <span class="ml-2">
                     Tokiwa Scholar 
@@ -44,14 +46,14 @@
         <main class="w-full grid grid-cols-3" style="height: calc(100vh - 5rem);">
             <!-- side bar container -->
             <div class="py-1 overflow-hidden">
-                <div class="border-r border-purple-300 h-full overflow-y-scroll p-4 pb-0">
-                    <h2 class="text-2xl font-bold border-b-2 border-purple-300">検索</h2>
+                <div class="border-r border-green-300 h-full overflow-y-scroll p-4 pb-0">
+                    <h2 class="text-2xl font-bold border-b-2 border-green-300">検索</h2>
                     <div class="mt-4 mb-16 grid grid-cols-4 lg:grid-cols-5 shadow-md">
                         <input 
                             id="search-word"
                             type="search"
                             placeholder="例:スクミリンゴガイ"
-                            class="col-span-3 lg:col-span-4 rounded-l-md focus:outline-none focus:ring focus:border-purple-300 w-full h-10 px-2"
+                            class="col-span-3 lg:col-span-4 rounded-l-md focus:outline-none focus:ring focus:border-green-300 w-full h-10 px-2"
                         >
                         <button 
                             id="search-btn"
@@ -60,7 +62,7 @@
                         >検索</button>
                     </div>
 
-                    <h2 class="text-2xl font-bold border-b-2 border-purple-300">カテゴリー</h2>
+                    <h2 class="text-2xl font-bold border-b-2 border-green-300">カテゴリー</h2>
                     <div class="mt-4">
                         <div id="category-list" class="h-full">
                             <div class="flex justify-center items-center animate-pulse">
@@ -75,7 +77,7 @@
             <!-- search result container -->
             <div class="col-span-2 py-4 overflow-hidden">
                 <!-- before search -->
-                <div id="before-search" class="w-full h-full flex flex-col justify-center items-center text-purple-800">
+                <div id="before-search" class="w-full h-full flex flex-col justify-center items-center text-green-900">
                     <div class="w-96 text-center">
                         <img src="./src/before_search.png">
                         <p class="text-left">
@@ -84,7 +86,7 @@
                     </div>
                 </div>
                 <!-- searching -->
-                <div id="searching" class="hidden w-full h-full flex flex-col justify-center items-center text-purple-800">
+                <div id="searching" class="hidden w-full h-full flex flex-col justify-center items-center text-green-900">
                     <div class="w-96 text-center">
                         <img src="./src/searching.png">
                         <p class="flex justify-center items-center">
@@ -97,7 +99,7 @@
                 </div>
                 
                 <!-- search fail -->
-                <div id="search-fail" class="hidden w-full h-full flex flex-col justify-center items-center text-purple-800">
+                <div id="search-fail" class="hidden w-full h-full flex flex-col justify-center items-center text-green-900">
                     <div class="w-96 text-center">
                         <img src="./src/search_fail.png">
                         <p class="flex justify-center items-center">
@@ -108,14 +110,14 @@
 
                 <!-- search result -->
                 <div id="search-result" class="hidden w-full h-full overflow-y-scroll p-4">
-                    <h2 class="text-2xl font-black text-purple-800 mb-8">「<span class="show-search-word"></span>」の検索結果</h2>
+                    <h2 class="text-2xl font-black text-green-900 mb-8">「<span class="show-search-word"></span>」の検索結果</h2>
                     <ul id="paper-list">
                         
                     </ul>
                 </div>
             </div>
         </main>
-        <footer class="bg-purple-600 w-full flex items-center justify-center h-8 px-2 text-white">
+        <footer class="bg-green-700 w-full flex items-center justify-center h-8 px-2 text-white">
             <p>&copy; 2024 常磐大学高等学校 研究開発部</p>
         </footer>
     </div>
