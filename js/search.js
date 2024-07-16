@@ -89,7 +89,7 @@ async function HandleWordSearch () {
             let keywords = "";
 
             for (let j = 0; j < datas[i].keyword.length; j++) {
-                keywords += `<li class="m-1"><button onclick="HandleTagSearch('${ datas[i].keyword[j] }')" class="bg-purple-600 text-white p-2 py-1 rounded-full">${ datas[i].keyword[j] }</button></li>`;
+                keywords += `<li class="m-1"><button onclick="HandleTagSearch('${ datas[i].keyword[j] }')" class="bg-green-600 text-white p-2 py-1 rounded-full">${ datas[i].keyword[j] }</button></li>`;
             }
 
             li.innerHTML = `
@@ -205,7 +205,7 @@ async function HandleCategorySearch(type, ctgry) {
             let keywords = "";
 
             for (let j = 0; j < datas[i].keyword.length; j++) {
-                keywords += `<li class="m-1"><button onclick="HandleTagSearch('${ datas[i].keyword[j] }')" class="bg-purple-600 text-white p-2 py-1 rounded-full">${ datas[i].keyword[j] }</button></li>`;
+                keywords += `<li class="m-1"><button onclick="HandleTagSearch('${ datas[i].keyword[j] }')" class="bg-green-600 text-white p-2 py-1 rounded-full">${ datas[i].keyword[j] }</button></li>`;
             }
 
             li.innerHTML = `
